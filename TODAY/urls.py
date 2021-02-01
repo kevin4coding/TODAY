@@ -20,7 +20,7 @@ urlpatterns = [
     ###################home_page########################################
     path('', views.index, name="todo"),
     ###################Give id no. item_id name or item_id=i.id#########
-    path('del/', views.remove, name="del"),
+    path('del/<int:item_id>', views.remove, name="del"),
     ####################################################################
     path('admin/', admin.site.urls),
 ]
